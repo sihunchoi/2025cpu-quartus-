@@ -93,18 +93,7 @@ assign data_re = ~MemWriteM;
 E_M_DFF #(.WIDTH(32),.RESET_VALUE(32'h0)) RegWriteE_M(.clk(clk),.n_rst(n_rst),.din(data_addr),.dout(ALUResultM));
 E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0)) MemWriteE_M(.clk(clk),.n_rst(n_rst),.din(data_we),.dout(MemWriteM));
 
-/*
-E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0))cs_dmem_n_f(.clk(clk),.n_rst(n_rst),.din(cs_mem_n),.dout(cs_mem_n_ff));
-E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0))cs_tbmem_n_f(.clk(clk),.n_rst(n_rst),.din(cs_tbman_n),.dout(cs_tbmem_n_ff));
-E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0))cs_gpio_n_f(.clk(clk),.n_rst(n_rst),.din(cs_gpio_n),.dout(cs_gpio_n_ff));
-E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0))cs_timer_n_f(.clk(clk),.n_rst(n_rst),.din(cs_timer_n),.dout(cs_timer_n_ff));
-E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0))cs_uart_n_f(.clk(clk),.n_rst(n_rst),.din(cs_uart_n),.dout(cs_uart_n_ff));
 
-E_M_DFF #(.WIDTH(32),.RESET_VALUE(32'h0))data_out_f(.clk(clk),.n_rst(n_rst),.din(data_out),.dout(data_out_ff));
-E_M_DFF #(.WIDTH(32),.RESET_VALUE(32'h0))gpio_out_f(.clk(clk),.n_rst(n_rst),.din(gpio_out),.dout(gpio_out_ff));
-E_M_DFF #(.WIDTH(32),.RESET_VALUE(32'h0))timer_out_f(.clk(clk),.n_rst(n_rst),.din(timer_out),.dout(timer_out_ff));
-E_M_DFF #(.WIDTH(32),.RESET_VALUE(32'h0))uart_out_f(.clk(clk),.n_rst(n_rst),.din(uart_out),.dout(uart_out_ff));
-*/
 
 
 
@@ -168,22 +157,7 @@ E_M_DFF #(.WIDTH(32),.RESET_VALUE(32'h0))uart_out_f(.clk(clk),.n_rst(n_rst),.din
     );
 
 `endif
- /*
- data_mux u_data_mux(
-    .cs_dmem_n(cs_mem_n_ff),
-    .read_data_dmem(read_imem_data_mem),
-    .cs_tbman_n(cs_tbmem_n_ff),
-    .read_data_tbman(data_out_ff),
-    .cs_gpio_n(cs_gpio_n_ff),
-    .read_data_gpio(gpio_out_ff),
-    .cs_timer_n(cs_timer_n_ff),
-    .read_data_timer(timer_out_ff),
-    .cs_uart_n(cs_uart_n_ff),
-    .read_data_uart(uart_out_ff),
 
-    .read_data(read_data)
-  );
- */
 
     //---------------------------------------
     //data_mux

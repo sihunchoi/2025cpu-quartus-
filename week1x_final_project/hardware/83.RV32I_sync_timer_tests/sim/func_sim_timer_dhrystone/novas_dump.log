@@ -142,12 +142,12 @@ maxproc		1030723
 Runtime environment variables:
 UNAME=/bin/uname
 LC_ALL=C
-LD_LIBRARY_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/lib:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64::/usr/lib:/usr/lib:/usr/lib:/usr/lib:/usr/lib
+LD_LIBRARY_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/lib:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64::/usr/lib:/usr/lib:/usr/lib:/usr/lib
 LS_COLORS=rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
 SNPS_INTERNAL_VCS_LINUX_OS=linux
 LC_MEASUREMENT=ko_KR.UTF-8
-SNPS_VCS_INTERNAL_ROOT_START_TIME=1737182064.590460834
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1737816104.851702034
 LC_PAPER=ko_KR.UTF-8
 LC_MONETARY=ko_KR.UTF-8
 XDG_MENU_PREFIX=gnome-
@@ -157,12 +157,12 @@ HISTCONTROL=ignoredups
 DISPLAY=:14.0
 HOSTNAME=sse506
 SCRNAME=vcs
-OLDPWD=/home/std249/2025cpu/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir/debug_dump/fsearch
-SNPS_VCS_INTERNAL_CURR_PID=3921230
+OLDPWD=/home/std249/cpu2025-quartus-/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir/debug_dump/fsearch
+SNPS_VCS_INTERNAL_CURR_PID=653628
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
 COLORTERM=truecolor
-DESKTOP_AUTOSTART_ID=106f4b6ba864a45ea2173710015448917800012093690007
-MAKE_TERMOUT=/dev/pts/18
+DESKTOP_AUTOSTART_ID=10c68283dc8eb926ad173781385123243900005763130007
+MAKE_TERMOUT=/dev/pts/12
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPSLMD_LICENSE_FILE=27020@smu409-01:27020@117.16.175.176
 OVA_UUM=0
@@ -171,7 +171,7 @@ MFLAGS=
 VCS_MODE_FLAG=64
 S_COLORS=auto
 which_declare=declare -f
-XDG_SESSION_ID=c183
+XDG_SESSION_ID=c208
 XRDP_SOCKET_PATH=/run/xrdp/1024
 MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
 USER=std249
@@ -180,18 +180,19 @@ DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
 SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
 OS_LDFLAGS=
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/3f998126_4875_4382_9b7a_ec05d4bc9679
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/54649082_508b_4f14_9f65_fd730048916b
 XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_14
 PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
-PWD=/home/std249/2025cpu/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
+PWD=/home/std249/cpu2025-quartus-/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
 FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 VMR_MODE_FLAG=64
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 HOME=/home/std249
 UID=1024
-SSH_AGENT_PID=1209591
+SSH_AGENT_PID=576529
 VCS_ARG_ADDED_FOR_TMP=1
 XDG_DATA_DIRS=/home/std249/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+QSYS_ROOTDIR=/home/std249/intelFPGA_lite/20.1/quartus/sopc_builder/bin
 VCS_USER_OPTIONS=-full64 -R -debug_acc+all -sverilog -kdb -timescale=1ns/1ns -f run.f
 VCS_ARCH_OVERRIDE=linux
 LC_NUMERIC=ko_KR.UTF-8
@@ -203,20 +204,20 @@ ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 TERM=xterm-256color
 VTE_VERSION=5204
 SHELL=/bin/bash
-SNPS_VCS_INTERNAL_ROOT_PID=3921230
+SNPS_VCS_INTERNAL_ROOT_PID=653628
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 SNPS_VCS_INTERNAL_MEMPRELOAD_USE_LIBC=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20250118063424_3921230
+SNPS_VCS_TMPDIR=/tmp/vcs_20250125144144_653628
 XDG_CURRENT_DESKTOP=GNOME
-GNOME_TERMINAL_SERVICE=:1.74
+GNOME_TERMINAL_SERVICE=:1.73
 MAKELEVEL=1
 VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
-TURBO_LOG_DIR=/tmp/vcs_20250118063424_3921230
+TURBO_LOG_DIR=/tmp/vcs_20250125144144_653628
 SHLVL=3
 VCS_COM=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
-MAKE_TERMERR=/dev/pts/18
+MAKE_TERMERR=/dev/pts/12
 VCS_ARCH=linux64
 MANPATH=:
 VCS_DEPTH=0
@@ -226,15 +227,15 @@ LOGNAME=std249
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1024/bus
 XDG_RUNTIME_DIR=/run/user/1024
 MODULEPATH_modshare=/usr/share/Modules/modulefiles:2:/etc/modulefiles:2:/usr/share/modulefiles:2
-PATH=.:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/home/std249/.local/bin:/home/std249/bin:/usr/share/Modules/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin
+PATH=.:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/home/std249/.local/bin:/home/std249/bin:/usr/share/Modules/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/intelFPGA_lite/20.1/quartus/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/intelFPGA_lite/20.1/quartus/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/intelFPGA_lite/20.1/quartus/bin:/home/std249/toolchain/riscv-toolchain-fa19/bin:/home/std249/intelFPGA_lite/20.1/quartus/bin
 VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 MODULESHOME=/usr/share/Modules
-sysc_uni_pwd=/home/std249/2025cpu/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
+sysc_uni_pwd=/home/std249/cpu2025-quartus-/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
 HISTSIZE=1000
 MAKEFLAGS=
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1209369,unix/unix:/tmp/.ICE-unix/1209369
-XRDP_SESSION=1209317
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/576313,unix/unix:/tmp/.ICE-unix/576313
+XRDP_SESSION=576212
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_TIME=ko_KR.UTF-8
 BASH_FUNC_which%%=() {  ( alias;
@@ -334,86 +335,86 @@ SPECMAN_OUTPUT_TO_TTY=1
 FLEXLM_BORROWFILE=/home/std249/.sse506-borrow.txt
 Runtime command line arguments:
 argv[0]=simv
-253 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.120 user,  287.38M mem
-254 Elapsed time:    0:00:00    Sat Jan 18 15:34:26 2025
-255 User CPU time used: 0 seconds
-256 System CPU time used: 0 seconds
-257 pliAppInit
-258 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
-259 FSDB_GATE is set.
-260 FSDB_RTL is set.
-261 FSDB_FIELDTYPE is set.
-262 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
-263 Enable Parallel Dumping.
-264 pliAppMiscSet: New Sim Round
-265 pliEntryInit
-266 LIBSSCORE=found /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/lib/LINUXAMD64/libsscore_vcs202109.so through $NOVAS_HOME setting.
-267 FSDB Dumper for VCS, Release Verdi_S-2021.09-SP2-9, Linux x86_64/64bit, 03/29/2023
-268 (C) 1996 - 2023 by Synopsys, Inc.
-269 sps_call_fsdbDumpfile_main at 0 : ../../testbench/c_tests_tb.v(124)
-270 argv[0]: (wave.fsdb)
-271 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-272 *Verdi* : Create FSDB file 'wave.fsdb'
-273 [spi_vcs_vd_ppi_create_root]: no upf option
-274 compile option from '/home/std249/2025cpu/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir/vcs_rebuild'.
-275   "vcs '-full64' '-R' '-debug_acc+all' '-sverilog' '-kdb' '-timescale=1ns/1ns' '-f' 'run.f' 2>&1"
-276 DVDI_is_vir_unload_enabled is enable
-277 FSDB_VCS_ENABLE_NATIVE_VC is enable
-278 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/c_tests_tb.v(125)
-279 argv[0]: (0)
-280 *Verdi* : Begin traversing the scopes, layer (0).
-281 *Verdi* : End of traversing.
-282 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.130 user,  405.11M mem
-                   incr: 0.010 sys,  0.010 user,  25.99M mem
-                   accu: 0.010 sys,  0.010 user,  25.99M mem
-              accu incr: 0.010 sys,  0.010 user,  25.99M mem
+254 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.120 user,  285.27M mem
+255 Elapsed time:    0:00:00    Sat Jan 25 23:41:46 2025
+256 User CPU time used: 0 seconds
+257 System CPU time used: 0 seconds
+258 pliAppInit
+259 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+260 FSDB_GATE is set.
+261 FSDB_RTL is set.
+262 FSDB_FIELDTYPE is set.
+263 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+264 Enable Parallel Dumping.
+265 pliAppMiscSet: New Sim Round
+266 pliEntryInit
+267 LIBSSCORE=found /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/lib/LINUXAMD64/libsscore_vcs202109.so through $NOVAS_HOME setting.
+268 FSDB Dumper for VCS, Release Verdi_S-2021.09-SP2-9, Linux x86_64/64bit, 03/29/2023
+269 (C) 1996 - 2023 by Synopsys, Inc.
+270 sps_call_fsdbDumpfile_main at 0 : ../../testbench/c_tests_tb.v(124)
+271 argv[0]: (wave.fsdb)
+272 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+273 *Verdi* : Create FSDB file 'wave.fsdb'
+274 [spi_vcs_vd_ppi_create_root]: no upf option
+275 compile option from '/home/std249/cpu2025-quartus-/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir/vcs_rebuild'.
+276   "vcs '-full64' '-R' '-debug_acc+all' '-sverilog' '-kdb' '-timescale=1ns/1ns' '-f' 'run.f' 2>&1"
+277 DVDI_is_vir_unload_enabled is enable
+278 FSDB_VCS_ENABLE_NATIVE_VC is enable
+279 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/c_tests_tb.v(125)
+280 argv[0]: (0)
+281 *Verdi* : Begin traversing the scopes, layer (0).
+282 *Verdi* : End of traversing.
+283 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.130 user,  386.24M mem
+                   incr: 0.000 sys,  0.010 user,  9.23M mem
+                   accu: 0.000 sys,  0.010 user,  9.23M mem
+              accu incr: 0.000 sys,  0.010 user,  9.23M mem
 
-          Count usage: 1928 var,  1462 idcode,  287 callback
-                 incr: 1928 var,  1462 idcode,  287 callback
-                 accu: 1928 var,  1462 idcode,  287 callback
-            accu incr: 1928 var,  1462 idcode,  287 callback
-283 Elapsed time:    0:00:00    Sat Jan 18 15:34:26 2025
-284 User CPU time used: 0 seconds
-285 System CPU time used: 0 seconds
-286 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.040 sys,  0.130 user,  406.16M mem
+          Count usage: 1885 var,  1446 idcode,  282 callback
+                 incr: 1885 var,  1446 idcode,  282 callback
+                 accu: 1885 var,  1446 idcode,  282 callback
+            accu incr: 1885 var,  1446 idcode,  282 callback
+284 Elapsed time:    0:00:00    Sat Jan 25 23:41:46 2025
+285 User CPU time used: 0 seconds
+286 System CPU time used: 0 seconds
+287 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.030 sys,  0.130 user,  387.29M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.010 sys,  0.010 user,  27.04M mem
+                   accu: 0.000 sys,  0.010 user,  10.28M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 1928 var,  1462 idcode,  287 callback
+          Count usage: 1885 var,  1446 idcode,  282 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1928 var,  1462 idcode,  287 callback
+                 accu: 1885 var,  1446 idcode,  282 callback
             accu incr: 0 var,  0 idcode,  0 callback
-287 Elapsed time:    0:00:00    Sat Jan 18 15:34:26 2025
-288 User CPU time used: 0 seconds
-289 System CPU time used: 0 seconds
-290 End of simulation at 7832710000
-291 Memory usage: 550.617 M
-292 Maximum resident set size: 207 MB
-293 Hard page faults: 0
-294 Soft page faults: 34089
-295 Elapsed time:    0:00:07    Sat Jan 18 15:34:33 2025
-296 User CPU time used: 8 seconds
-297 System CPU time used: 0 seconds
-298 Begin FSDB profile info:
-299 FSDB Writer : bc1(4367102) bcn(17955727) mtf/stf(0/3)
-FSDB Writer elapsed time : flush(1.006434) io wait(0.000000) theadpool wait(0.000000)
+288 Elapsed time:    0:00:00    Sat Jan 25 23:41:46 2025
+289 User CPU time used: 0 seconds
+290 System CPU time used: 0 seconds
+291 End of simulation at 7832710
+292 Memory usage: 531.743 M
+293 Maximum resident set size: 205 MB
+294 Hard page faults: 0
+295 Soft page faults: 33563
+296 Elapsed time:    0:00:08    Sat Jan 25 23:41:54 2025
+297 User CPU time used: 9 seconds
+298 System CPU time used: 0 seconds
+299 Begin FSDB profile info:
+300 FSDB Writer : bc1(4318996) bcn(17973028) mtf/stf(0/3)
+FSDB Writer elapsed time : flush(0.944934) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-300 End FSDB profile info
-301 FSDB closed. Name: wave.fsdb Size: 2648714
-302 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-303                      - BlockUsed:182 Acquire:23105813 BufferUsed:356361186
-304                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:160
-305                      - MainProducerTime:7.690485367 TotalConsumerTime:1.595533344
-306                      - ElapsedTime:7.605063000
-307 Producer   0 profile - BlockUsed:182 Acquire:23105813 BufferUsed:356361186
-308 Consumer   0 profile - Affinity:-1 CPUTime:1.595533344 LifeTime:7.280691181 (0.22%)
-309                      - BlockUsed:182 Acquire:23105813 BufferUsed:356361186
-310 SimExit
-311 Elapsed time:    0:00:08    Sat Jan 18 15:34:34 2025
-312 User CPU time used: 9 seconds
-313 System CPU time used: 0 seconds
-314 Sim process exit
+301 End FSDB profile info
+302 FSDB closed. Name: wave.fsdb Size: 2627431
+303 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+304                      - BlockUsed:182 Acquire:23075013 BufferUsed:356390617
+305                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:163
+306                      - MainProducerTime:7.483890223 TotalConsumerTime:1.759520055
+307                      - ElapsedTime:7.701370000
+308 Producer   0 profile - BlockUsed:182 Acquire:23075013 BufferUsed:356390617
+309 Consumer   0 profile - Affinity:-1 CPUTime:1.759520055 LifeTime:7.595698483 (0.23%)
+310                      - BlockUsed:182 Acquire:23075013 BufferUsed:356390617
+311 SimExit
+312 Elapsed time:    0:00:08    Sat Jan 25 23:41:54 2025
+313 User CPU time used: 9 seconds
+314 System CPU time used: 0 seconds
+315 Sim process exit

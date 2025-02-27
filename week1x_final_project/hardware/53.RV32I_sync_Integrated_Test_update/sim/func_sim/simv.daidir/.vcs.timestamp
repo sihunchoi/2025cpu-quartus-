@@ -33,17 +33,17 @@
 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 run.f
-59
+77
 which_declare=declare -f
-XRDP_SOCKET_PATH=/run/xrdp/1007
-XRDP_SESSION=3638714
-XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_14
-XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_14
+XRDP_SOCKET_PATH=/run/xrdp/1024
+XRDP_SESSION=1553923
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_10
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_10
 XMODIFIERS=@im=ibus
-XDG_SESSION_ID=c381
-XDG_RUNTIME_DIR=/run/user/1007
+XDG_SESSION_ID=c2
+XDG_RUNTIME_DIR=/run/user/1024
 XDG_MENU_PREFIX=gnome-
-XDG_DATA_DIRS=/home2/s1_student3/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_DATA_DIRS=/home/std249/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 XDG_CURRENT_DESKTOP=GNOME
 VTE_VERSION=5204
 VMR_MODE_FLAG=64
@@ -59,83 +59,107 @@ VCS_ARCH_OVERRIDE=linux
 VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
+S_COLORS=auto
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
-SSH_AUTH_SOCK=/run/user/1007/keyring/ssh
+SSH_AUTH_SOCK=/run/user/1024/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SSH_AGENT_PID=3638958
+SSH_AGENT_PID=1554374
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3638788,unix/unix:/tmp/.ICE-unix/3638788
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1554161,unix/unix:/tmp/.ICE-unix/1554161
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
+QSYS_ROOTDIR=/home/std249/intelFPGA_lite/20.1/quartus/sopc_builder/bin
 PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
 PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
 OVA_UUM=0
 OS_LDFLAGS=
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+MODULESHOME=/usr/share/Modules
+MODULEPATH_modshare=/usr/share/Modules/modulefiles:2:/etc/modulefiles:2:/usr/share/modulefiles:2
+MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/3
-MAKE_TERMERR=/dev/pts/3
+MAKE_TERMOUT=/dev/pts/0
+MAKE_TERMERR=/dev/pts/0
 MAKELEVEL=1
 MAKEFLAGS=
+LOADEDMODULES=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_TIME=ko_KR.UTF-8
+LC_PAPER=ko_KR.UTF-8
+LC_NUMERIC=ko_KR.UTF-8
+LC_MONETARY=ko_KR.UTF-8
+LC_MEASUREMENT=ko_KR.UTF-8
 LC_ALL=C
 ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 HISTCONTROL=ignoredups
-GNOME_TERMINAL_SERVICE=:1.75
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/99d2d05f_97a4_4049_a1fc_695168cb5043
+GNOME_TERMINAL_SERVICE=:1.76
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/86453f10_6d77_4147_b32e_c2cbc953dde8
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
-DESKTOP_AUTOSTART_ID=102320dce0c9d21da2173311201642173700036387880007
+DESKTOP_AUTOSTART_ID=10717481826216c282173925452469358000015541610007
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1007/bus
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1024/bus
 COLORTERM=truecolor
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
+BASH_FUNC_switchml%%=() {  typeset swfound=1;_ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then_ typeset swname='main';_ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then_ typeset swfound=0;_ unset MODULES_USE_COMPAT_VERSION;_ fi;_ else_ typeset swname='compatibility';_ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then_ typeset swfound=0;_ MODULES_USE_COMPAT_VERSION=1;_ export MODULES_USE_COMPAT_VERSION;_ fi;_ fi;_ if [ $swfound -eq 0 ]; then_ echo "Switching to Modules $swname version";_ source /usr/share/Modules/init/bash;_ else_ echo "Cannot switch to Modules $swname version, command not found";_ return 1;_ fi_}
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then_ eval "module $@";_ else_ /usr/bin/scl "$@";_ fi_}
+BASH_FUNC_module%%=() {  _module_raw "$@" 2>&1_}
+BASH_FUNC_ml%%=() {  module ml "$@"_}
+BASH_FUNC__module_raw%%=() {  unset _mlshdbg;_ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then_ case "$-" in _ *v*x*)_ set +vx;_ _mlshdbg='vx'_ ;;_ *v*)_ set +v;_ _mlshdbg='v'_ ;;_ *x*)_ set +x;_ _mlshdbg='x'_ ;;_ *)_ _mlshdbg=''_ ;;_ esac;_ fi;_ unset _mlre _mlIFS;_ if [ -n "${IFS+x}" ]; then_ _mlIFS=$IFS;_ fi;_ IFS=' ';_ for _mlv in ${MODULES_RUN_QUARANTINE:-};_ do_ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then_ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then_ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";_ fi;_ _mlrv="MODULES_RUNENV_${_mlv}";_ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";_ fi;_ done;_ if [ -n "${_mlre:-}" ]; then_ eval `eval ${_mlre} /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;_ else_ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;_ fi;_ _mlstatus=$?;_ if [ -n "${_mlIFS+x}" ]; then_ IFS=$_mlIFS;_ else_ unset IFS;_ fi;_ unset _mlre _mlv _mlrv _mlIFS;_ if [ -n "${_mlshdbg:-}" ]; then_ set -$_mlshdbg;_ fi;_ unset _mlshdbg;_ return $_mlstatus_}
 0
 0
-42
-1732536829 mem_path.vh
-1732536829 opcode.vh
-1732536829 ../../testbench/cpu_tb.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/TimerCounter.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/data_mux.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Addr_Decoder.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_wrap.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_regs.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_apbs.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/riscvsingle.sv
-1733115189 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/datapath.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/controller.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/ASYNC_RAM_DP_WBE.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/dualport_mem_synch_rw_dualclk.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/reg_file_async.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Branch_Logic.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/maindec.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/aludec.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Csr_Logic.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/alu.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/flush.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/stall.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/hazard_unit.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/sync_block.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/delay.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/M_W_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/E_M_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/D_E_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/F_D_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/be_logic_load.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/be_logic_store.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/mux3.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/mux2.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/flopr.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/flopenr.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/extend.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/adder.sv
-1732536829 ./sim_define.v
-1733116209 run.f
+48
+1737814933 mem_path.vh
+1737814933 opcode.vh
+1737814933 ../../testbench/cpu_tb.v
+1738763810 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/TimerCounter.v
+1738763949 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/data_mux.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Addr_Decoder.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_wrap.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_regs.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_apbs.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/riscvsingle.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/datapath.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/controller.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/ASYNC_RAM_DP_WBE.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/dualport_mem_synch_rw_dualclk.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/reg_file_async.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Branch_Logic.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/maindec.sv
+1737815837 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/aludec.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Csr_Logic.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/alu.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_wrap.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_transmitter.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_receiver.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/SEG7_LUT.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/flush.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/stall.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/hazard_unit.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/sync_block.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/delay.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/M_W_DFF.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/E_M_DFF.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/D_E_DFF.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/F_D_DFF.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/be_logic_load.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/be_logic_store.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/mux3.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/mux2.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/flopr.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/flopenr.sv
+1737814933 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/extend.sv
+1739260421 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/adder.sv
+1737814933 ./sim_define.v
+1739255601 run.f
 1680083496 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 1681355180 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
 4
@@ -143,5 +167,5 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
 1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
 1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
-1733116220 simv.daidir
+1739260426 simv.daidir
 -1 partitionlib

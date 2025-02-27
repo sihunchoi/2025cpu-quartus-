@@ -35,14 +35,14 @@
 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 run.f
-77
+78
 which_declare=declare -f
 XRDP_SOCKET_PATH=/run/xrdp/1024
-XRDP_SESSION=3635244
-XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_16
-XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_16
+XRDP_SESSION=1553923
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_10
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_10
 XMODIFIERS=@im=ibus
-XDG_SESSION_ID=c162
+XDG_SESSION_ID=c2
 XDG_RUNTIME_DIR=/run/user/1024
 XDG_MENU_PREFIX=gnome-
 XDG_DATA_DIRS=/home/std249/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
@@ -65,14 +65,15 @@ S_COLORS=auto
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
 SSH_AUTH_SOCK=/run/user/1024/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SSH_AGENT_PID=3635507
+SSH_AGENT_PID=1554374
 SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3635287,unix/unix:/tmp/.ICE-unix/3635287
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1554161,unix/unix:/tmp/.ICE-unix/1554161
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
+QSYS_ROOTDIR=/home/std249/intelFPGA_lite/20.1/quartus/sopc_builder/bin
 PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
 PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
 OVA_UUM=0
@@ -83,8 +84,8 @@ MODULESHOME=/usr/share/Modules
 MODULEPATH_modshare=/usr/share/Modules/modulefiles:2:/etc/modulefiles:2:/usr/share/modulefiles:2
 MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/17
-MAKE_TERMERR=/dev/pts/17
+MAKE_TERMOUT=/dev/pts/0
+MAKE_TERMERR=/dev/pts/0
 MAKELEVEL=1
 MAKEFLAGS=
 LOADEDMODULES=
@@ -97,12 +98,12 @@ LC_MEASUREMENT=ko_KR.UTF-8
 LC_ALL=C
 ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 HISTCONTROL=ignoredups
-GNOME_TERMINAL_SERVICE=:1.74
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/3a100a43_5c54_49bf_802c_308ae314792e
+GNOME_TERMINAL_SERVICE=:1.76
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/86453f10_6d77_4147_b32e_c2cbc953dde8
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
-DESKTOP_AUTOSTART_ID=10ac43b4b9c03eef2c173675585486560100036352870007
+DESKTOP_AUTOSTART_ID=10717481826216c282173925452469358000015541610007
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1024/bus
@@ -116,50 +117,50 @@ BASH_FUNC__module_raw%%=() {  unset _mlshdbg;_ if [ "${MODULES_SILENT_SHELL_DEBU
 0
 0
 46
-1736242157 mem_path.vh
-1736242157 ../../testbench/c_tests_tb.v
-1736757316 ../../src/rtl/myCPU/6stage/RV321_System.v
-1736757281 ../../src/rtl/myCPU/6stage/data_forwarding.sv
-1736757320 ../../src/rtl/myCPU/6stage/stall.sv
-1736757286 ../../src/rtl/myCPU/6stage/datamux.sv
-1736757245 ../../src/rtl/myCPU/6stage/address_decoder.sv
-1736757311 ../../src/rtl/myCPU/6stage/riscvsingle.sv
-1736757292 ../../src/rtl/myCPU/6stage/datapath.sv
-1736757276 ../../src/rtl/myCPU/6stage/controller.sv
-1736757266 ../../src/rtl/myCPU/6stage/ASYNC_RAM_DP_WBE.v
-1736757296 ../../src/rtl/myCPU/6stage/dualport_mem_synch_rw_dualclk.sv
-1736757306 ../../src/rtl/myCPU/6stage/reg_file_async.v
-1736757272 ../../src/rtl/myCPU/6stage/branch_logic.sv
-1736757302 ../../src/rtl/myCPU/6stage/maindec.sv
-1736757261 ../../src/rtl/myCPU/6stage/aludec.sv
-1736757249 ../../src/rtl/myCPU/6stage/alu.sv
-1736757342 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart_wrap.v
-1736757342 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart_transmitter.v
-1736757342 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart_receiver.v
-1736757342 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart.v
-1736757333 ../../src/rtl/myCPU/6stage/12peripheral_timer/TimerCounter.v
-1736757338 ../../src/rtl/myCPU/6stage/11peripheral_gpio/SEG7_LUT.v
-1736757338 ../../src/rtl/myCPU/6stage/11peripheral_gpio/GPIO.v
-1736757380 ../../src/rtl/myCPU/6stage/tbman/tbman_apbs.v
-1736757380 ../../src/rtl/myCPU/6stage/tbman/tbman_regs.v
-1736757380 ../../src/rtl/myCPU/6stage/tbman/tbman_wrap.v
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/flopenrclr.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/floprclr.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/pipeline4.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/pipeline3.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/pipeline2.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/pipeline1.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/csr.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/be_logic.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/mux4.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/mux3.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/mux2.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/flopr.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/flopenr.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/extend.sv
-1736757347 ../../src/rtl/myCPU/6stage/building_blocks/adder.sv
-1736242157 ./sim_define.v
-1736759356 run.f
+1737814933 mem_path.vh
+1737814933 ../../testbench/c_tests_tb.v
+1737814933 ../../src/rtl/myCPU/6stage/RV321_System.v
+1737814933 ../../src/rtl/myCPU/6stage/data_forwarding.sv
+1737814933 ../../src/rtl/myCPU/6stage/stall.sv
+1737814933 ../../src/rtl/myCPU/6stage/datamux.sv
+1737814933 ../../src/rtl/myCPU/6stage/address_decoder.sv
+1737814933 ../../src/rtl/myCPU/6stage/riscvsingle.sv
+1737814933 ../../src/rtl/myCPU/6stage/datapath.sv
+1737814933 ../../src/rtl/myCPU/6stage/controller.sv
+1737814933 ../../src/rtl/myCPU/6stage/ASYNC_RAM_DP_WBE.v
+1737814933 ../../src/rtl/myCPU/6stage/dualport_mem_synch_rw_dualclk.sv
+1737814933 ../../src/rtl/myCPU/6stage/reg_file_async.v
+1737814933 ../../src/rtl/myCPU/6stage/branch_logic.sv
+1737814933 ../../src/rtl/myCPU/6stage/maindec.sv
+1737814933 ../../src/rtl/myCPU/6stage/aludec.sv
+1737814933 ../../src/rtl/myCPU/6stage/alu.sv
+1737814933 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart_wrap.v
+1737814933 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart_transmitter.v
+1737814933 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart_receiver.v
+1737814933 ../../src/rtl/myCPU/6stage/13peripheral_uart/uart.v
+1737814933 ../../src/rtl/myCPU/6stage/12peripheral_timer/TimerCounter.v
+1737814933 ../../src/rtl/myCPU/6stage/11peripheral_gpio/SEG7_LUT.v
+1737814933 ../../src/rtl/myCPU/6stage/11peripheral_gpio/GPIO.v
+1737814933 ../../src/rtl/myCPU/6stage/tbman/tbman_apbs.v
+1737814933 ../../src/rtl/myCPU/6stage/tbman/tbman_regs.v
+1737814933 ../../src/rtl/myCPU/6stage/tbman/tbman_wrap.v
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/flopenrclr.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/floprclr.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/pipeline4.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/pipeline3.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/pipeline2.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/pipeline1.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/csr.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/be_logic.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/mux4.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/mux3.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/mux2.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/flopr.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/flopenr.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/extend.sv
+1737814933 ../../src/rtl/myCPU/6stage/building_blocks/adder.sv
+1737814933 ./sim_define.v
+1737814933 run.f
 1680083496 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 1681355180 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
 4
@@ -167,5 +168,5 @@ BASH_FUNC__module_raw%%=() {  unset _mlshdbg;_ if [ "${MODULES_SILENT_SHELL_DEBU
 1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
 1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
 1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
-1736759389 simv.daidir
+1739260763 simv.daidir
 -1 partitionlib

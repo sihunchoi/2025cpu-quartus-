@@ -17,11 +17,38 @@ module adder(
     wire c_msb;
     wire c_30;
     wire [2:0] w_carry;
+    
+    wire [31:0] a_1;
+    wire [31:0] b_1;
+    wire [2:0] w_carry_1;
+    wire [31:0] sum_1;
+    wire clk,n_rst;
+
 
     cla_8bit CLA_8bit_01 (.a(a[7:0]), .b(b[7:0]), .ci(ci), .s(sum[7:0]), .co(w_carry[0]), .c_30());
-    cla_8bit CLA_8bit_02 (.a(a[15:8]),  .b(b[15:8]),  .ci(w_carry[0]), .s(sum[15:8]), .co(w_carry[1]), .c_30());
-    cla_8bit CLA_8bit_03 (.a(a[23:16]), .b(b[23:16]), .ci(w_carry[1]), .s(sum[23:16]), .co(w_carry[2]), .c_30());
-    cla_8bit CLA_8bit_04 (.a(a[31:24]), .b(b[31:24]), .ci(w_carry[2]), .s(sum[31:24]), .co(c_msb), .c_30(c_30));
+    
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip1(.clk(clk),.n_rst(n_rst),.din(a[15:8]),.dout(a_1[15:8]));
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip2(.clk(clk),.n_rst(n_rst),.din(b[15:8]),.dout(b_1[15:8]));
+    E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0)) cla_pip3(.clk(clk),.n_rst(n_rst),.din(w_carry[0]),.dout(w_carry_1[0]));
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip4(.clk(clk),.n_rst(n_rst),.din(sum[15:8]),.dout(sum_1[15:8]));
+    E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0)) cla_pip5(.clk(clk),.n_rst(n_rst),.din(w_carry[1]),.dout(w_carry_1[1]));
+
+   cla_8bit CLA_8bit_02 (.a(a_1[15:8]),  .b(b_1[15:8]),  .ci(w_carry_1[0]), .s(sum_1[15:8]), .co(w_carry_1[1]), .c_30());
+   
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip6(.clk(clk),.n_rst(n_rst),.din(a[23:16]),.dout(a_1[23:16]));
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip7(.clk(clk),.n_rst(n_rst),.din(b[23:16]),.dout(b_1[23:16]));
+    E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0)) cla_pip8(.clk(clk),.n_rst(n_rst),.din(w_carry[2]),.dout(w_carry_1[2]));
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip9(.clk(clk),.n_rst(n_rst),.din(sum[23:16]),.dout(sum_1[23:16]));
+   
+   cla_8bit CLA_8bit_03 (.a(a_1[23:16]), .b(b_1[23:16]), .ci(w_carry_1[1]), .s(sum_1[23:16]), .co(w_carry_1[2]), .c_30());
+
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip10(.clk(clk),.n_rst(n_rst),.din(a[31:24]),.dout(a_1[31:24]));
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip11(.clk(clk),.n_rst(n_rst),.din(b[31:24]),.dout(b_1[31:24]));
+    E_M_DFF #(.WIDTH(8),.RESET_VALUE(8'h0)) cla_pip12(.clk(clk),.n_rst(n_rst),.din(sum[31:24]),.dout(sum_1[31:24]));
+    E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0)) cla_pip13(.clk(clk),.n_rst(n_rst),.din(c_msb),.dout(c_msb_1));
+    E_M_DFF #(.WIDTH(1),.RESET_VALUE(1'h0)) cla_pip14(.clk(clk),.n_rst(n_rst),.din(c_30),.dout(c_30_1));
+    
+   cla_8bit CLA_8bit_04 (.a(a_1[31:24]), .b(b_1[31:24]), .ci(w_carry_1[2]), .s(sum_1[31:24]), .co(c_msb_1), .c_30(c_30_1));
 
     assign N = sum[31];
     assign Z = (sum == 32'h0) ? 1'b1 : 1'b0;

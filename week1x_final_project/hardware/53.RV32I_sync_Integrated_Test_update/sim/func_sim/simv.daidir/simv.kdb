@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home2/s1_student3/project1/2024fa_cpu_design/week1x_final_project/hardware/53.RV32I_sync_Integrated_Test_update/sim/func_sim
+COMPILE_PATH=/home/std249/cpu2025-quartus-/week1x_final_project/hardware/53.RV32I_sync_Integrated_Test_update/sim/func_sim
 VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
 VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
 SystemC=FALSE

@@ -1,4 +1,4 @@
 S-2021.09-SP2-9_Full64
 Build Date = Apr 12 2023 20:16:42
 RedHat
-Compile Location: /home/std249/2025cpu/ex_6stage/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
+Compile Location: /home/std249/cpu2025-quartus-/ex_6stage/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone

@@ -23,6 +23,16 @@
 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/stall.sv
 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/flush.sv
 
++incdir+../../src/peripheral_gpio/
+../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v
+../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/SEG7_LUT.v
++incdir+../../src/peripheral_uart/
+../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_receiver.v
+../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_transmitter.v
+../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_wrap.v
+../../src/rtl/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart.v
+
+
 +incdir+../../src/rtl/
 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/alu.sv
 

@@ -13,13 +13,16 @@ module aludec(
     // output
     output reg [4:0] ALUControl;
 
-    always@(*)begin                // ALU decoder
+    always@(*)
+    begin                // ALU decoder
         if(ALUop == 2'b00)
             ALUControl = 5'b00000;                                                                                                   // lw, sw, Lui, auipc, jalr
-        else if(ALUop == 2'b01)begin
+        else if(ALUop == 2'b01)
+        begin
            	ALUControl = 5'b00001; //else	
 		end 						// b-type
-        else if(ALUop == 2'b10) begin
+        else if(ALUop == 2'b10) 
+        begin
             if (funct3 == 3'b000 && ({opcode[5], funct7} == 2'b00 || {opcode[5], funct7} == 2'b01 || {opcode[5], funct7} == 2'b10))  // add
                 ALUControl = 5'b00000;
             else if (funct3 == 3'b000 && {opcode[5], funct7} == 2'b11)																 // sub
@@ -45,7 +48,8 @@ module aludec(
 			else
                 ALUControl = 5'h0;
 		end
-		else if(ALUop == 2'b11)begin
+		else if(ALUop == 2'b11)
+        begin
 			if(funct3 == 3'b001)
 				ALUControl = 5'b00110;																							     // slli		 	
 			else if(funct3 == 3'b101 && funct7 == 1'b1)
@@ -70,6 +74,11 @@ module aludec(
 			else
 				ALUControl = 5'h0;
 		end
+        else
+        begin
+            ALUControl = 5'h0;
+        end
+			
     end
         
 

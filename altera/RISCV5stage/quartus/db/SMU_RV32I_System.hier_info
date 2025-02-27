@@ -796,10 +796,10 @@ ALUop[1] => Equal0.IN0
 ALUop[1] => Equal1.IN1
 ALUop[1] => Equal2.IN0
 ALUop[1] => Equal3.IN0
-ALUControl[0] <= ALUControl[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALUControl[1] <= ALUControl[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALUControl[2] <= ALUControl[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALUControl[3] <= ALUControl[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[0] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[1] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[2] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[3] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[4] <= <GND>
 
 
@@ -1689,33 +1689,33 @@ sum[4] <= cla_8bit:CLA_8bit_01.s
 sum[5] <= cla_8bit:CLA_8bit_01.s
 sum[6] <= cla_8bit:CLA_8bit_01.s
 sum[7] <= cla_8bit:CLA_8bit_01.s
-sum[8] <= cla_8bit:CLA_8bit_02.s
-sum[9] <= cla_8bit:CLA_8bit_02.s
-sum[10] <= cla_8bit:CLA_8bit_02.s
-sum[11] <= cla_8bit:CLA_8bit_02.s
-sum[12] <= cla_8bit:CLA_8bit_02.s
-sum[13] <= cla_8bit:CLA_8bit_02.s
-sum[14] <= cla_8bit:CLA_8bit_02.s
-sum[15] <= cla_8bit:CLA_8bit_02.s
-sum[16] <= cla_8bit:CLA_8bit_03.s
-sum[17] <= cla_8bit:CLA_8bit_03.s
-sum[18] <= cla_8bit:CLA_8bit_03.s
-sum[19] <= cla_8bit:CLA_8bit_03.s
-sum[20] <= cla_8bit:CLA_8bit_03.s
-sum[21] <= cla_8bit:CLA_8bit_03.s
-sum[22] <= cla_8bit:CLA_8bit_03.s
-sum[23] <= cla_8bit:CLA_8bit_03.s
-sum[24] <= cla_8bit:CLA_8bit_04.s
-sum[25] <= cla_8bit:CLA_8bit_04.s
-sum[26] <= cla_8bit:CLA_8bit_04.s
-sum[27] <= cla_8bit:CLA_8bit_04.s
-sum[28] <= cla_8bit:CLA_8bit_04.s
-sum[29] <= cla_8bit:CLA_8bit_04.s
-sum[30] <= cla_8bit:CLA_8bit_04.s
-sum[31] <= cla_8bit:CLA_8bit_04.s
-N <= cla_8bit:CLA_8bit_04.s
+sum[8] <= E_M_DFF:cla_pip4.din
+sum[9] <= E_M_DFF:cla_pip4.din
+sum[10] <= E_M_DFF:cla_pip4.din
+sum[11] <= E_M_DFF:cla_pip4.din
+sum[12] <= E_M_DFF:cla_pip4.din
+sum[13] <= E_M_DFF:cla_pip4.din
+sum[14] <= E_M_DFF:cla_pip4.din
+sum[15] <= E_M_DFF:cla_pip4.din
+sum[16] <= E_M_DFF:cla_pip9.din
+sum[17] <= E_M_DFF:cla_pip9.din
+sum[18] <= E_M_DFF:cla_pip9.din
+sum[19] <= E_M_DFF:cla_pip9.din
+sum[20] <= E_M_DFF:cla_pip9.din
+sum[21] <= E_M_DFF:cla_pip9.din
+sum[22] <= E_M_DFF:cla_pip9.din
+sum[23] <= E_M_DFF:cla_pip9.din
+sum[24] <= E_M_DFF:cla_pip12.din
+sum[25] <= E_M_DFF:cla_pip12.din
+sum[26] <= E_M_DFF:cla_pip12.din
+sum[27] <= E_M_DFF:cla_pip12.din
+sum[28] <= E_M_DFF:cla_pip12.din
+sum[29] <= E_M_DFF:cla_pip12.din
+sum[30] <= E_M_DFF:cla_pip12.din
+sum[31] <= E_M_DFF:cla_pip12.din
+N <= E_M_DFF:cla_pip12.din
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C <= cla_8bit:CLA_8bit_04.co
+C <= E_M_DFF:cla_pip13.din
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -1865,6 +1865,125 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip3
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip4
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip5
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|cla_8bit:CLA_8bit_02
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -2011,6 +2130,118 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip6
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip7
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip8
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip9
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|cla_8bit:CLA_8bit_03
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -2155,6 +2386,125 @@ c[4] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[5] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip10
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip11
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip12
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip13
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|E_M_DFF:cla_pip14
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4|cla_8bit:CLA_8bit_04
@@ -6066,33 +6416,33 @@ sum[4] <= cla_8bit:CLA_8bit_01.s
 sum[5] <= cla_8bit:CLA_8bit_01.s
 sum[6] <= cla_8bit:CLA_8bit_01.s
 sum[7] <= cla_8bit:CLA_8bit_01.s
-sum[8] <= cla_8bit:CLA_8bit_02.s
-sum[9] <= cla_8bit:CLA_8bit_02.s
-sum[10] <= cla_8bit:CLA_8bit_02.s
-sum[11] <= cla_8bit:CLA_8bit_02.s
-sum[12] <= cla_8bit:CLA_8bit_02.s
-sum[13] <= cla_8bit:CLA_8bit_02.s
-sum[14] <= cla_8bit:CLA_8bit_02.s
-sum[15] <= cla_8bit:CLA_8bit_02.s
-sum[16] <= cla_8bit:CLA_8bit_03.s
-sum[17] <= cla_8bit:CLA_8bit_03.s
-sum[18] <= cla_8bit:CLA_8bit_03.s
-sum[19] <= cla_8bit:CLA_8bit_03.s
-sum[20] <= cla_8bit:CLA_8bit_03.s
-sum[21] <= cla_8bit:CLA_8bit_03.s
-sum[22] <= cla_8bit:CLA_8bit_03.s
-sum[23] <= cla_8bit:CLA_8bit_03.s
-sum[24] <= cla_8bit:CLA_8bit_04.s
-sum[25] <= cla_8bit:CLA_8bit_04.s
-sum[26] <= cla_8bit:CLA_8bit_04.s
-sum[27] <= cla_8bit:CLA_8bit_04.s
-sum[28] <= cla_8bit:CLA_8bit_04.s
-sum[29] <= cla_8bit:CLA_8bit_04.s
-sum[30] <= cla_8bit:CLA_8bit_04.s
-sum[31] <= cla_8bit:CLA_8bit_04.s
-N <= cla_8bit:CLA_8bit_04.s
+sum[8] <= E_M_DFF:cla_pip4.din
+sum[9] <= E_M_DFF:cla_pip4.din
+sum[10] <= E_M_DFF:cla_pip4.din
+sum[11] <= E_M_DFF:cla_pip4.din
+sum[12] <= E_M_DFF:cla_pip4.din
+sum[13] <= E_M_DFF:cla_pip4.din
+sum[14] <= E_M_DFF:cla_pip4.din
+sum[15] <= E_M_DFF:cla_pip4.din
+sum[16] <= E_M_DFF:cla_pip9.din
+sum[17] <= E_M_DFF:cla_pip9.din
+sum[18] <= E_M_DFF:cla_pip9.din
+sum[19] <= E_M_DFF:cla_pip9.din
+sum[20] <= E_M_DFF:cla_pip9.din
+sum[21] <= E_M_DFF:cla_pip9.din
+sum[22] <= E_M_DFF:cla_pip9.din
+sum[23] <= E_M_DFF:cla_pip9.din
+sum[24] <= E_M_DFF:cla_pip12.din
+sum[25] <= E_M_DFF:cla_pip12.din
+sum[26] <= E_M_DFF:cla_pip12.din
+sum[27] <= E_M_DFF:cla_pip12.din
+sum[28] <= E_M_DFF:cla_pip12.din
+sum[29] <= E_M_DFF:cla_pip12.din
+sum[30] <= E_M_DFF:cla_pip12.din
+sum[31] <= E_M_DFF:cla_pip12.din
+N <= E_M_DFF:cla_pip12.din
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C <= cla_8bit:CLA_8bit_04.co
+C <= E_M_DFF:cla_pip13.din
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -6242,6 +6592,125 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip3
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip4
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip5
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|cla_8bit:CLA_8bit_02
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -6388,6 +6857,118 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip6
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip7
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip8
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip9
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|cla_8bit:CLA_8bit_03
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -6532,6 +7113,125 @@ c[4] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[5] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip10
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip11
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip12
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip13
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|E_M_DFF:cla_pip14
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_target|cla_8bit:CLA_8bit_04
@@ -6754,33 +7454,33 @@ sum[4] <= cla_8bit:CLA_8bit_01.s
 sum[5] <= cla_8bit:CLA_8bit_01.s
 sum[6] <= cla_8bit:CLA_8bit_01.s
 sum[7] <= cla_8bit:CLA_8bit_01.s
-sum[8] <= cla_8bit:CLA_8bit_02.s
-sum[9] <= cla_8bit:CLA_8bit_02.s
-sum[10] <= cla_8bit:CLA_8bit_02.s
-sum[11] <= cla_8bit:CLA_8bit_02.s
-sum[12] <= cla_8bit:CLA_8bit_02.s
-sum[13] <= cla_8bit:CLA_8bit_02.s
-sum[14] <= cla_8bit:CLA_8bit_02.s
-sum[15] <= cla_8bit:CLA_8bit_02.s
-sum[16] <= cla_8bit:CLA_8bit_03.s
-sum[17] <= cla_8bit:CLA_8bit_03.s
-sum[18] <= cla_8bit:CLA_8bit_03.s
-sum[19] <= cla_8bit:CLA_8bit_03.s
-sum[20] <= cla_8bit:CLA_8bit_03.s
-sum[21] <= cla_8bit:CLA_8bit_03.s
-sum[22] <= cla_8bit:CLA_8bit_03.s
-sum[23] <= cla_8bit:CLA_8bit_03.s
-sum[24] <= cla_8bit:CLA_8bit_04.s
-sum[25] <= cla_8bit:CLA_8bit_04.s
-sum[26] <= cla_8bit:CLA_8bit_04.s
-sum[27] <= cla_8bit:CLA_8bit_04.s
-sum[28] <= cla_8bit:CLA_8bit_04.s
-sum[29] <= cla_8bit:CLA_8bit_04.s
-sum[30] <= cla_8bit:CLA_8bit_04.s
-sum[31] <= cla_8bit:CLA_8bit_04.s
-N <= cla_8bit:CLA_8bit_04.s
+sum[8] <= E_M_DFF:cla_pip4.din
+sum[9] <= E_M_DFF:cla_pip4.din
+sum[10] <= E_M_DFF:cla_pip4.din
+sum[11] <= E_M_DFF:cla_pip4.din
+sum[12] <= E_M_DFF:cla_pip4.din
+sum[13] <= E_M_DFF:cla_pip4.din
+sum[14] <= E_M_DFF:cla_pip4.din
+sum[15] <= E_M_DFF:cla_pip4.din
+sum[16] <= E_M_DFF:cla_pip9.din
+sum[17] <= E_M_DFF:cla_pip9.din
+sum[18] <= E_M_DFF:cla_pip9.din
+sum[19] <= E_M_DFF:cla_pip9.din
+sum[20] <= E_M_DFF:cla_pip9.din
+sum[21] <= E_M_DFF:cla_pip9.din
+sum[22] <= E_M_DFF:cla_pip9.din
+sum[23] <= E_M_DFF:cla_pip9.din
+sum[24] <= E_M_DFF:cla_pip12.din
+sum[25] <= E_M_DFF:cla_pip12.din
+sum[26] <= E_M_DFF:cla_pip12.din
+sum[27] <= E_M_DFF:cla_pip12.din
+sum[28] <= E_M_DFF:cla_pip12.din
+sum[29] <= E_M_DFF:cla_pip12.din
+sum[30] <= E_M_DFF:cla_pip12.din
+sum[31] <= E_M_DFF:cla_pip12.din
+N <= E_M_DFF:cla_pip12.din
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C <= cla_8bit:CLA_8bit_04.co
+C <= E_M_DFF:cla_pip13.din
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -6930,6 +7630,125 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip3
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip4
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip5
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|cla_8bit:CLA_8bit_02
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -7076,6 +7895,118 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip6
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip7
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip8
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip9
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|cla_8bit:CLA_8bit_03
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -7220,6 +8151,125 @@ c[4] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[5] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip10
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip11
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip12
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip13
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|E_M_DFF:cla_pip14
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|adder:u_pc_plus4M|cla_8bit:CLA_8bit_04
@@ -10744,33 +11794,33 @@ sum[4] <= cla_8bit:CLA_8bit_01.s
 sum[5] <= cla_8bit:CLA_8bit_01.s
 sum[6] <= cla_8bit:CLA_8bit_01.s
 sum[7] <= cla_8bit:CLA_8bit_01.s
-sum[8] <= cla_8bit:CLA_8bit_02.s
-sum[9] <= cla_8bit:CLA_8bit_02.s
-sum[10] <= cla_8bit:CLA_8bit_02.s
-sum[11] <= cla_8bit:CLA_8bit_02.s
-sum[12] <= cla_8bit:CLA_8bit_02.s
-sum[13] <= cla_8bit:CLA_8bit_02.s
-sum[14] <= cla_8bit:CLA_8bit_02.s
-sum[15] <= cla_8bit:CLA_8bit_02.s
-sum[16] <= cla_8bit:CLA_8bit_03.s
-sum[17] <= cla_8bit:CLA_8bit_03.s
-sum[18] <= cla_8bit:CLA_8bit_03.s
-sum[19] <= cla_8bit:CLA_8bit_03.s
-sum[20] <= cla_8bit:CLA_8bit_03.s
-sum[21] <= cla_8bit:CLA_8bit_03.s
-sum[22] <= cla_8bit:CLA_8bit_03.s
-sum[23] <= cla_8bit:CLA_8bit_03.s
-sum[24] <= cla_8bit:CLA_8bit_04.s
-sum[25] <= cla_8bit:CLA_8bit_04.s
-sum[26] <= cla_8bit:CLA_8bit_04.s
-sum[27] <= cla_8bit:CLA_8bit_04.s
-sum[28] <= cla_8bit:CLA_8bit_04.s
-sum[29] <= cla_8bit:CLA_8bit_04.s
-sum[30] <= cla_8bit:CLA_8bit_04.s
-sum[31] <= cla_8bit:CLA_8bit_04.s
-N <= cla_8bit:CLA_8bit_04.s
+sum[8] <= E_M_DFF:cla_pip4.din
+sum[9] <= E_M_DFF:cla_pip4.din
+sum[10] <= E_M_DFF:cla_pip4.din
+sum[11] <= E_M_DFF:cla_pip4.din
+sum[12] <= E_M_DFF:cla_pip4.din
+sum[13] <= E_M_DFF:cla_pip4.din
+sum[14] <= E_M_DFF:cla_pip4.din
+sum[15] <= E_M_DFF:cla_pip4.din
+sum[16] <= E_M_DFF:cla_pip9.din
+sum[17] <= E_M_DFF:cla_pip9.din
+sum[18] <= E_M_DFF:cla_pip9.din
+sum[19] <= E_M_DFF:cla_pip9.din
+sum[20] <= E_M_DFF:cla_pip9.din
+sum[21] <= E_M_DFF:cla_pip9.din
+sum[22] <= E_M_DFF:cla_pip9.din
+sum[23] <= E_M_DFF:cla_pip9.din
+sum[24] <= E_M_DFF:cla_pip12.din
+sum[25] <= E_M_DFF:cla_pip12.din
+sum[26] <= E_M_DFF:cla_pip12.din
+sum[27] <= E_M_DFF:cla_pip12.din
+sum[28] <= E_M_DFF:cla_pip12.din
+sum[29] <= E_M_DFF:cla_pip12.din
+sum[30] <= E_M_DFF:cla_pip12.din
+sum[31] <= E_M_DFF:cla_pip12.din
+N <= E_M_DFF:cla_pip12.din
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C <= cla_8bit:CLA_8bit_04.co
+C <= E_M_DFF:cla_pip13.din
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -10920,6 +11970,125 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip3
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip4
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip5
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|cla_8bit:CLA_8bit_02
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -11066,6 +12235,118 @@ c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip6
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip7
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip8
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip9
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|cla_8bit:CLA_8bit_03
 a[0] => a[0].IN1
 a[1] => a[1].IN1
@@ -11210,6 +12491,125 @@ c[4] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[5] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
 c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip10
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip11
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip12
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+n_rst => dout[1]~reg0.ACLR
+n_rst => dout[2]~reg0.ACLR
+n_rst => dout[3]~reg0.ACLR
+n_rst => dout[4]~reg0.ACLR
+n_rst => dout[5]~reg0.ACLR
+n_rst => dout[6]~reg0.ACLR
+n_rst => dout[7]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+din[1] => dout[1]~reg0.DATAIN
+din[2] => dout[2]~reg0.DATAIN
+din[3] => dout[3]~reg0.DATAIN
+din[4] => dout[4]~reg0.DATAIN
+din[5] => dout[5]~reg0.DATAIN
+din[6] => dout[6]~reg0.DATAIN
+din[7] => dout[7]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip13
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|E_M_DFF:cla_pip14
+clk => dout[0]~reg0.CLK
+n_rst => dout[0]~reg0.ACLR
+din[0] => dout[0]~reg0.DATAIN
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SMU_RV32I_System|riscvsingle:icpu|datapath:i_datapath|alu:u_ALU|adder:u_add_32bit_add|cla_8bit:CLA_8bit_04

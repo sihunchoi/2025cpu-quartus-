@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home/std249/2025cpu/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir
+pDaiDir                            	/home/std249/cpu2025-quartus-/week1x_final_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
@@ -31,7 +31,7 @@ fHsimTaskFuncXmrsDbg               	0
 fHsimAllTaskFuncXmrs               	0
 fHsimDoXmrProcessing               	1
 fNoMergeDelays                     	0
-uGlblTimeUnit                      	4
+uGlblTimeUnit                      	7
 fHsimAllMtm                        	0
 fSimprofileNew                     	0
 fFsimFlag                          	0

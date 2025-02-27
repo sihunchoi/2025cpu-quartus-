@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home/std249/2025cpu/ex_6stage/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
+COMPILE_PATH=/home/std249/cpu2025-quartus-/ex_6stage/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
 VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
 VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
 SystemC=FALSE
